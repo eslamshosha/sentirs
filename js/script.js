@@ -57,22 +57,33 @@ if ($(window).width() >= 991) {
       var item = $(this).siblings(".dropdown-content");
       item.slideToggle(400);
     });
-    //This is to Open Search Box
-    $(".header-icons .search").click(function () {
-      $("body").toggleClass("overflow");
-      $(".search .search-icon").toggleClass("open-search");
-      $(".search .search-icon").toggleClass("close-search");
-      $(".search-section").toggleClass("search-open");
-      $(".overlay-box2").fadeToggle(500);
-    });
-    // $(".overlay-box2").click(function () {
-    //   $("body").removeClass("overflow");
-    //   $(".search .search-icon").addClass("open-search");
-    //   $(".search .search-icon").removeClass("close-search");
-    //   $(".search-section").removeClass("search-open");
-    //   $(".overlay-box2").fadeOut(500);
-    // });
   }
+  //fixed nav
+  $stickyNav = $("header");
+  $(window).on("scroll load", function () {
+    var scroll = $(window).scrollTop();
+    if (scroll >= 200) {
+      $stickyNav.addClass("fixed-nav");
+    } else {
+      $stickyNav.removeClass("fixed-nav");
+    }
+    if (scroll == 0) {
+      $stickyNav.removeClass("fixed-nav");
+    }
+  });
+  lastScroll = 0;
+  $(window).on("scroll load", function () {
+    var scroll = $(window).scrollTop();
+    if (lastScroll - scroll > 0) {
+      $stickyNav.addClass("fixed-header");
+    } else {
+      $stickyNav.removeClass("fixed-header");
+    }
+    lastScroll = scroll;
+    if (scroll == 0) {
+      $stickyNav.removeClass("fixed-header");
+    }
+  });
   ///////// ** main** /////////
   var specials = new Swiper(".main-slider .swiper-container", {
     loop: true,
