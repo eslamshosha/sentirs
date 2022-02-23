@@ -511,6 +511,7 @@ html[dir="rtl"] .search-button {
   height: 90px;
   background-color: #e1f5f5;
   color: var(--main-color);
+  text-transform: capitalize;
   text-decoration: none !important;
   transition: all 0.3s ease-in-out;
 }
