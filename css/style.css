@@ -1565,7 +1565,7 @@ html[dir="rtl"] .footer-accordion.active:after {
     transition: all 0.3s ease-in-out;
   }
   .fixed-nav .search-section {
-    width: 40%;
+    width: 50%;
     order: unset;
     margin: 0;
   }
