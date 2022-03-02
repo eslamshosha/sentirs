@@ -1,12 +1,21 @@
+$(window).load(function () {
+  $(".preloader").slideUp();
+  $("body").removeClass("overflow");
+});
+
 $(document).ready(function () {
   new WOW().init();
+  if ($(window).width() >= 991) {
+    $(".menu-btn").hover(
+      function () {
+        $(".overlay-box").fadeIn(300);
+      },
+      function () {
+        $(".overlay-box").fadeOut(300);
+      }
+    );
+  }
 
-  
-if ($(window).width() >= 991) {
-  $('.btn-div').click(function () {
-    $(".btn-div").toggleClass("after");
-  })
-};
   //phone size menu onclick
   if ($(window).width() <= 991) {
     $("#menu-id").click(function (e) {
@@ -18,46 +27,49 @@ if ($(window).width() >= 991) {
     $(".nav-head .close-btn, .overlay-box").click(function () {
       // $(".overlay-box").fadeOut(300);
       $(".navgition").removeClass("reset-left");
-      $(".menu-bars .bars").toggleClass("open-bars");
-      $(".menu-bars .bars").toggleClass("close-bars");
+      // $(".menu-bars .bars").toggleClass("open-bars");
+      // $(".menu-bars .bars").toggleClass("close-bars");
       $("body").removeClass("overflow");
     });
-    $("#menu-id").click(function () {
-      $(".menu-bars .bars").toggleClass("open-bars");
-      $(".menu-bars .bars").toggleClass("close-bars");
+    // $("#menu-id").click(function () {
+    //   $(".menu-bars .bars").toggleClass("open-bars");
+    //   $(".menu-bars .bars").toggleClass("close-bars");
+    // });
+    // slide down menu
+    $(".btn-div").click(function () {
+      $(".cats-dispaly").slideToggle(400);
+      $(".overlay-box").fadeToggle(300);
+      if ($(window).width() <= 1199) {
+        $(".overlay-box").hide();
+        $(this).toggleClass("active");
+      }
     });
-       // slide down menu
-      $('.btn-div').click(function () {
-        $(".cats-dispaly").slideToggle(400);
-        $(".overlay-box").fadeToggle(300);
-        if ($(window).width() <= 1199) {
-            $(".overlay-box").hide();
-            $(this).toggleClass("active")
-        }
+    $(".overlay-box").click(function () {
+      $(".btn-div").toggleClass("after");
+      $(".cats-dispaly").slideToggle(400);
+      $(".overlay-box").fadeOut(300);
     });
-    $('.overlay-box').click(function () {
-        $(".btn-div").toggleClass("after");
-        $(".cats-dispaly").slideToggle(400);
-        $(".overlay-box").fadeOut(300);
-    });
-    $('.has-level-2>.cat-anchor').click(function (e) {
-      e.preventDefault()
+    $(".has-level-2>.cat-anchor").click(function (e) {
+      e.preventDefault();
       var item = $(this);
       $(".has-level-2>.cat-anchor").not(item).removeClass("active");
       $(item).toggleClass("active");
-      if ($(item).siblings().css('display') == 'none') {
-          $(item).siblings().slideDown(500);
+      if ($(item).siblings().css("display") == "none") {
+        $(item).siblings().slideDown(500);
       } else {
-          $(item).siblings().slideUp(500);
+        $(item).siblings().slideUp(500);
       }
       $(".has-level-2>.cat-anchor").not(item).siblings().slideUp(500);
-  })
+    });
     //dropdown inside menu
     $(".lang-word, .chevron-down").click(function (e) {
       e.preventDefault();
       var item = $(this).siblings(".dropdown-content");
       item.slideToggle(400);
     });
+
+    //placeholder
+    
   }
   //fixed nav
   $stickyNav = $("header");
@@ -65,11 +77,45 @@ if ($(window).width() >= 991) {
     var scroll = $(window).scrollTop();
     if (scroll >= 200) {
       $stickyNav.addClass("fixed-nav");
+      if ($(window).width() <= 991) {
+        if (document.dir == "rtl") {
+          $(".search-input").attr("placeholder", "ابحث");
+        } else {
+          $(".search-input").attr(
+            "placeholder",
+            "search"
+          );
+        }
+      }
     } else {
       $stickyNav.removeClass("fixed-nav");
+      if ($(window).width() <= 991) {
+        if (document.dir == "rtl") {
+          $(".search-input").attr(
+            "placeholder", 
+            "ابحث باسم المنتج، التصنيف او الماركة");
+        } else {
+          $(".search-input").attr(
+            "placeholder",
+            "Search by product name, category or brand"
+          );
+        }
+      }
     }
     if (scroll == 0) {
       $stickyNav.removeClass("fixed-nav");
+      if ($(window).width() <= 991) {
+        if (document.dir == "rtl") {
+          $(".search-input").attr(
+            "placeholder", 
+            "ابحث باسم المنتج، التصنيف او الماركة");
+        } else {
+          $(".search-input").attr(
+            "placeholder",
+            "Search by product name, category or brand"
+          );
+        }
+      }
     }
   });
   lastScroll = 0;

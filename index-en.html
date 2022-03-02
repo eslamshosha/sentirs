@@ -15,76 +15,23 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
-  <body>
+  <body class="overflow">
+    <!-- preloader -->
+    <div class="preloader">
+      <img src="images/logo-sm.png" alt="logo">
+    </div>
+    <!-- preloader -->
     <!-- header section -->
     <header>
       <div class="top-header">
         <div class="container">
           <div class="nav-header">
-            <figure class="img-logo">
-              <a href="#"
-                ><img src="images/logo.png" class="img-responsive"
-              /></a>
-            </figure>
-            <div class="search-section">
-              <form class="search-form">
-                <input
-                  class="search-input"
-                  type="text"
-                  name=""
-                  value=""
-                  placeholder="Search by product name, category or brand"
-                />
-                <button class="search-button">
-                  <i class="las la-search"></i>
-                </button>
-              </form>
-            </div>
-            <div class="header-icons">
-              <div class="dropdown cat-anchor">
-                <div class="add-to">
-                  <div class="user-cont">
-                    <i class="las la-user"></i>
-                    <span class="hide-txt">My account</span>
-                  </div>
-                  <div class="dropdown-content">
-                    <a class="cat-drop" href="#">sign in</a>
-                    <a class="cat-drop" href="#">new account</a>
-                  </div>
-                </div>
-              </div>
-              <a role="button" type="button" title="" class="add-to">
-                <i class="las la-shopping-cart"></i>
-              </a>
-              <div class="show-icons">
-                <a class="menu-bars fixall" id="menu-id" href="#!">
-                  <span class="bars open-bars"></span>
-                </a>
-              </div>
-            </div>
-          </div>
-          <nav>
-            <div class="navgition">
-              <div class="nav-head">
-                <div class="lang-section">
-                  <div class="dropdown">
-                    <div class="lang-word chevron-down">
-                      <img src="images/lang-en.png" alt="lang-img" />
-                      <span class="">English</span>
-                    </div>
-                    <div class="dropdown-content">
-                      <a class="cat-drop" href="index-en.html">English</a>
-                      <a class="cat-drop" href="index.html">العربيه</a>
-                    </div>
-                  </div>
-                </div>
-                <!-- <a class="fixall close-btn">
-                  <i class="fas fa-times"></i>
-                </a> -->
-              </div>
-              <div class="menu-list hide-big">
-                <a href="#" class="cat-anchor"> Home </a>
-              </div>
+            <div class="fixed-logo">
+              <figure class="logo-sm">
+                <a href="#"
+                  ><img src="images/logo-sm.png" class="img-responsive"
+                /></a>
+              </figure>
               <div class="menu-btn">
                 <div class="btn-div">
                   <span class="menu-name">
@@ -247,26 +194,42 @@
                 </div>
                 <!-- slidedown-menu -->
               </div>
-              <ul class="big-menu list-unstyled">
-                <li class="menu-list hide-sm">
-                  <a href="#" class="cat-anchor"> home </a>
-                </li>
-                <li class="menu-list">
-                  <a href="#" class="cat-anchor"> Brands </a>
-                </li>
-                <li class="menu-list">
-                  <a href="#" class="cat-anchor"> Offers </a>
-                </li>
-                <li class="menu-list">
-                  <a href="#" class="cat-anchor"> new arrivals </a>
-                </li>
-                <li class="menu-list">
-                  <a href="#" class="cat-anchor"> about us </a>
-                </li>
-                <li class="menu-list">
-                  <a href="#" class="cat-anchor"> contact us </a>
-                </li>
-              </ul>
+            </div>
+            <figure class="img-logo">
+              <a href="#"
+                ><img src="images/logo.png" class="img-responsive"
+              /></a>
+            </figure>
+            <div class="search-section">
+              <form class="search-form">
+                <input
+                  class="search-input"
+                  type="text"
+                  name=""
+                  value=""
+                  placeholder="Search by product name, category or brand"
+                />
+                <button class="search-button">
+                  <i class="las la-search"></i>
+                </button>
+              </form>
+            </div>
+            <div class="header-icons">
+              <div class="dropdown cat-anchor">
+                <div class="add-to">
+                  <div class="user-cont">
+                    <i class="las la-user"></i>
+                    <span class="hide-txt">My account</span>
+                  </div>
+                  <div class="dropdown-content">
+                    <a class="cat-drop" href="#">sign in</a>
+                    <a class="cat-drop" href="#">new account</a>
+                  </div>
+                </div>
+              </div>
+              <a role="button" type="button" title="" class="add-to">
+                <i class="las la-shopping-cart"></i>
+              </a>
               <div class="lang-section">
                 <div class="dropdown">
                   <div class="lang-word chevron-down">
@@ -279,11 +242,237 @@
                   </div>
                 </div>
               </div>
+              <div class="show-icons">
+                <a class="menu-bars fixall" id="menu-id" href="#!">
+                  <span class="bars open-bars"></span>
+                </a>
+              </div>
             </div>
-          </nav>
+          </div>
+          
         </div>
-        <div class="overlay-box"></div>
       </div>
+      <nav>
+        <div class="container">
+          <div class="navgition">
+            <div class="nav-head">
+
+              <div class="lang-section">
+                <div class="dropdown">
+                  <div class="lang-word chevron-down">
+                    <img src="images/lang-en.png" alt="lang-img" />
+                    <span class="">English</span>
+                  </div>
+                  <div class="dropdown-content">
+                    <a class="cat-drop" href="index-en.html">English</a>
+                    <a class="cat-drop" href="index.html">العربيه</a>
+                  </div>
+                </div>
+              </div>
+              <a class="fixall close-btn">
+                <i class="las la-times"></i>
+              </a>
+            </div>
+            <div class="menu-list hide-big">
+              <a href="#" class="cat-anchor"> Home </a>
+            </div>
+            <div class="menu-btn">
+              <div class="btn-div">
+                <span class="menu-name">
+                  <i class="las la-bars"></i>
+                  All categories
+                </span>
+              </div>
+              <!-- slidedown-menu -->
+              <div class="cats-dispaly">
+                <ul class="cats-div list-unstyled">
+                  <li class="cat-li has-level-2">
+                    <a href="#" class="cat-anchor fixall">
+                      <div class="cat-head">
+                        <figure>
+                          <img src="images/mega-img/01.png" />
+                        </figure>
+                        perfume
+                      </div>
+                      <i class="las la-plus"></i>
+                    </a>
+                    <div class="sub-list">
+                      <ul class="list-unstyled">
+                        <li class="cat-li has-level-3">
+                          <a class="cat-anchor fixall" href="#"> incense </a>
+                        </li>
+                        <li class="cat-li has-level-3">
+                          <a class="cat-anchor fixall" href="#">
+                            Room fresheners
+                          </a>
+                        </li>
+                        <li class="cat-li has-level-3">
+                          <a class="cat-anchor fixall" href="#"> scents </a>
+                        </li>
+                        <li class="cat-li has-level-3">
+                          <a class="cat-anchor fixall" href="#"> candles </a>
+                        </li>
+                        <li class="cat-li has-level-3">
+                          <a class="cat-anchor fixall" href="#">
+                            accessories
+                          </a>
+                        </li>
+                        <li class="cat-li has-level-3">
+                          <a class="cat-anchor fixall" href="#"> incense </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="cat-li has-level-2">
+                    <a href="#" class="cat-anchor fixall">
+                      <div class="cat-head">
+                        <figure>
+                          <img src="images/mega-img/02.png" />
+                        </figure>
+                        Beauty
+                      </div>
+                      <i class="las la-plus"></i>
+                    </a>
+                    <div class="sub-list">
+                      <ul class="list-unstyled">
+                        <li class="cat-li has-level-3">
+                          <a class="cat-anchor fixall" href="#"> incense </a>
+                        </li>
+                        <li class="cat-li has-level-3">
+                          <a class="cat-anchor fixall" href="#">
+                            Room fresheners
+                          </a>
+                        </li>
+                        <li class="cat-li has-level-3">
+                          <a class="cat-anchor fixall" href="#"> scents </a>
+                        </li>
+                        <li class="cat-li has-level-3">
+                          <a class="cat-anchor fixall" href="#"> candles </a>
+                        </li>
+                        <li class="cat-li has-level-3">
+                          <a class="cat-anchor fixall" href="#">
+                            accessories
+                          </a>
+                        </li>
+                        <li class="cat-li has-level-3">
+                          <a class="cat-anchor fixall" href="#"> incense </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="cat-li has-level-2">
+                    <a href="#" class="cat-anchor fixall">
+                      <div class="cat-head">
+                        <figure>
+                          <img src="images/mega-img/03.png" />
+                        </figure>
+                        home
+                      </div>
+                      <i class="las la-plus"></i>
+                    </a>
+                    <div class="sub-list">
+                      <ul class="list-unstyled">
+                        <li class="cat-li has-level-3">
+                          <a class="cat-anchor fixall" href="#"> incense </a>
+                        </li>
+                        <li class="cat-li has-level-3">
+                          <a class="cat-anchor fixall" href="#">
+                            Room fresheners
+                          </a>
+                        </li>
+                        <li class="cat-li has-level-3">
+                          <a class="cat-anchor fixall" href="#"> scents </a>
+                        </li>
+                        <li class="cat-li has-level-3">
+                          <a class="cat-anchor fixall" href="#"> candles </a>
+                        </li>
+                        <li class="cat-li has-level-3">
+                          <a class="cat-anchor fixall" href="#">
+                            accessories
+                          </a>
+                        </li>
+                        <li class="cat-li has-level-3">
+                          <a class="cat-anchor fixall" href="#"> incense </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="cat-li has-level-2">
+                    <a href="#" class="cat-anchor fixall">
+                      <div class="cat-head">
+                        <figure>
+                          <img src="images/mega-img/04.png" />
+                        </figure>
+                        devices
+                      </div>
+                      <i class="las la-plus"></i>
+                    </a>
+                    <div class="sub-list">
+                      <ul class="list-unstyled">
+                        <li class="cat-li has-level-3">
+                          <a class="cat-anchor fixall" href="#"> incense </a>
+                        </li>
+                        <li class="cat-li has-level-3">
+                          <a class="cat-anchor fixall" href="#">
+                            Room fresheners
+                          </a>
+                        </li>
+                        <li class="cat-li has-level-3">
+                          <a class="cat-anchor fixall" href="#"> scents </a>
+                        </li>
+                        <li class="cat-li has-level-3">
+                          <a class="cat-anchor fixall" href="#"> candles </a>
+                        </li>
+                        <li class="cat-li has-level-3">
+                          <a class="cat-anchor fixall" href="#">
+                            accessories
+                          </a>
+                        </li>
+                        <li class="cat-li has-level-3">
+                          <a class="cat-anchor fixall" href="#"> incense </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <!-- slidedown-menu -->
+            </div>
+            <ul class="big-menu list-unstyled">
+              <li class="menu-list hide-sm">
+                <a href="#" class="cat-anchor"> home </a>
+              </li>
+              <li class="menu-list">
+                <a href="#" class="cat-anchor"> Brands </a>
+              </li>
+              <li class="menu-list">
+                <a href="#" class="cat-anchor"> Offers </a>
+              </li>
+              <li class="menu-list">
+                <a href="#" class="cat-anchor"> new arrivals </a>
+              </li>
+              <li class="menu-list">
+                <a href="#" class="cat-anchor"> about us </a>
+              </li>
+              <li class="menu-list">
+                <a href="#" class="cat-anchor"> contact us </a>
+              </li>
+            </ul>
+            <div class="lang-section">
+              <div class="dropdown">
+                <div class="lang-word chevron-down">
+                  <img src="images/lang-en.png" alt="lang-img" />
+                  <span class="">English</span>
+                </div>
+                <div class="dropdown-content">
+                  <a class="cat-drop" href="index-en.html">English</a>
+                  <a class="cat-drop" href="index.html">العربيه</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
     </header>
     <!-- header section     -->
     <!-- main slider -->
